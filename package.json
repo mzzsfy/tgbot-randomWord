@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "run": "node app.js"
+  },
+  "dependencies": {
+    "node-telegram-bot-api": "~0.59.0"
+  }
+}
