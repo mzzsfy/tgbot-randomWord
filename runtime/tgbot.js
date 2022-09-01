@@ -67,6 +67,10 @@ const path = require("path");
       this.me = data
       this.id = data.id
       this.username = data.username
+      console.log(`获取bot信息成功,@${data.username},id:${data.id},已经开始监听消息`)
+    }).catch((e)=>{
+      console.log(`获取bot信息失败,即将退出`,e.message)
+      process.exit(1)
     })
   }
 
@@ -452,5 +456,5 @@ setTimeout(() => {
       })
     }
   })
-  console.log("tgbot启动完成")
+  console.log("tgbot准备就绪,正在获取自己的信息")
 }, 1)

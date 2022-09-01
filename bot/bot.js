@@ -138,7 +138,7 @@ chat: id: ${msg.cid} number: ${chatSendLimit[msg.cid]?.num || 0} limit: ${storag
 
 for (let k in storage.entryPoint) {
   let c = storage.entryPoint[k].commands
-  for (let s in c) {
+  for (let s of c) {
     bot.onText('/' + s, getFn(k))
   }
 }
@@ -751,7 +751,7 @@ bot.onText('/addAdmin ??', async (msg, data) => {
       return
     }
     if (storage.admin.includes(data)) {
-      bot.sendWithButton(msg.cid, "错误,重复的管理:" + data + " ,他已经可以编辑我的词库了", [[bot.button("点击进行管理", {
+      await bot.sendWithButton(msg.cid, "错误,重复的管理:" + data + " ,他已经可以编辑我的词库了", [[bot.button("点击进行管理", {
         url: "https://t.me/" + bot.username + "?start=" + data
       })]], {
         option: {reply_to_message_id: msg.mid}
@@ -761,7 +761,7 @@ bot.onText('/addAdmin ??', async (msg, data) => {
     storage.admin.push(data)
     console.log(msg.uid, '增加管理', data)
     doSave()
-    bot.sendWithButton(msg.cid, "ok,已增加: " + data + " ,他可以私聊编辑我的词库了", [[bot.button("点击进行管理", {
+    await bot.sendWithButton(msg.cid, "ok,已增加: " + data + " ,他可以私聊编辑我的词库了", [[bot.button("点击进行管理", {
       url: "https://t.me/" + bot.username + "?start=" + data
     })]], {
       option: {reply_to_message_id: msg.mid}
@@ -800,7 +800,7 @@ bot.onText('/isAdmin ??', async (msg, data) => {
       await msg.reply("请回复一条消息")
       return
     }
-    bot.sendWithButton(msg.cid, "是否管理: " + storage.admin.includes(data), [[bot.button("点击进行管理", {
+    await bot.sendWithButton(msg.cid, "是否管理: " + storage.admin.includes(data), [[bot.button("点击进行管理", {
       url: "https://t.me/" + bot.username + "?start=" + data
     })]], {
       option: {reply_to_message_id: msg.mid}
