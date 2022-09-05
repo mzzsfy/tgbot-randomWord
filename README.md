@@ -15,3 +15,17 @@ bot支持的内容
 - 转发的消息
 - 贴图
 - 图片,视频等媒体文件
+
+##部署
+
+首先确保有node,并且npm可用,然后执行如下代码
+
+```bash
+npm install
+
+export TGBOT_TOKEN=你的botToken
+export TGBOT_SUPER_ADMIN_ID=你的tgId
+#以上2条可在config/tgbot.js手动修改,不使用环境变量
+
+node app
+```
