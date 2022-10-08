@@ -1,6 +1,6 @@
 # 一个简单的tgbot
 
-使用了最简单的依赖,并且自行简单包装 https://github.com/mzzsfy/node-telegram-bot-wrapper
+使用了最简单的依赖,并且简单包装 https://github.com/mzzsfy/node-telegram-bot-wrapper
 
 该bot实现了一些简单的功能
 
