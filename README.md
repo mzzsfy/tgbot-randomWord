@@ -1,4 +1,5 @@
 # 一个简单的tgbot
+[![](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fmzzsfy%2Ftgbot-randomWord&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://github.com/mzzsfy)
 
 使用了最简单的依赖,并且简单包装 https://github.com/mzzsfy/node-telegram-bot-wrapper
 
